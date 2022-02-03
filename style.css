@@ -16,7 +16,7 @@
 }
 
 body {
-    background-color: var(--light-gray);
+    background-color: var(--light-grayish-blue);
     display: grid;
     grid-template-rows: 1fr auto;
     gap: 2em;
