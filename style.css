@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+:root {
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--light-gray);
+    display: grid;
+    grid-template-rows: 1fr auto;
+    gap: 2em;
+    padding: 4em 0;
+    font-family: "Barlow Semi Condensed";
+}
+
+/*Main holder*/
+main {
+    display: grid;
+    margin: 0 5% 0 5%;
+    padding: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+    /*Daniel's card*/
+    .main__card__Daniel { 
+        background-color: var(--moderate-violet);
+        grid-area: 1 / 1 / 2 / 3; 
+        border-radius: 10px;
+        padding: 1.5rem;
+        position: relative;
+    }
+    .main__card__Daniel--quotation {
+        border-radius: 0;
+        border: none;
+        width: 170px;
+        position: absolute;
+        top: 0;
+        right: 7rem;
+    }
+    .main__card__Daniel h3 {
+        color: var(--white);
+        font-size: 1.5rem;
+        line-height: 1.4;
+        margin-bottom: 0.8rem;
+        position: relative;
+        z-index: 1;
+    }
+    .main__card__Daniel p {
+        color: var(--light-gray, 0.7);
+        font-size: 1rem;
+        line-height: 1.4;
+        position: relative;
+        z-index: 1;
+    }
+    
+    /*Jonathan's card*/
+    .main__card__Jonathan { 
+        background-color: var(--very-dark-grayish-blue);
+        grid-area: 1 / 3 / 2 / 4; 
+        border-radius: 10px;
+        padding: 1.5rem;
+    }
+    .main__card__Jonathan h3 {
+        color: var(--white);
+        font-size: 1.5rem;
+        line-height: 1.4;
+        margin-bottom: 0.8rem;
+    }
+    .main__card__Jonathan p {
+        color: var(--light-gray, 0.7);
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+    
+    /*Kira's card*/
+    .main__card__Kira { 
+        background-color: var(--white);
+        grid-area: 1 / 4 / 3 / 5; 
+        border-radius: 10px;
+        padding: 1.5rem;
+    }
+    .main__card__Kira h3 {
+        color: var(--very-dark-grayish-blue);
+        font-size: 1.5rem;
+        line-height: 1.4;
+        margin-bottom: 0.8rem;
+    }
+    .main__card__Kira p {
+        color: var(--light-gray);
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+    .main__card__Kira h5{
+        color: var(--very-dark-grayish-blue, 0.7);
+    }
+    
+    /*Jeanett's card*/
+    .main__card__Jeanett { 
+        background-color: var(--white);
+        grid-area: 2 / 1 / 3 / 2; 
+        border-radius: 10px;
+        padding: 1.5rem;
+    }
+    .main__card__Jeanett h3 {
+        color: var(--very-dark-grayish-blue);
+        font-size: 1.5rem;
+        line-height: 1.4;
+        margin-bottom: 0.8rem;
+    }
+    .main__card__Jeanett p {
+        color: var(--light-gray);
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+    .main__card__Jeanett h5{
+        color: var(--very-dark-grayish-blue, 0.7);
+    }
+    
+    /*Patrick's card*/
+    .main__card__Patrick {
+        background-color: var(--very-dark-blackish-blue);
+        grid-area: 2 / 2 / 3 / 4; 
+        border-radius: 10px;
+        padding: 1.5rem;
+    }
+    .main__card__Patrick h3 {
+        color: var(--white);
+        font-size: 1.5rem;
+        line-height: 1.4;
+        margin-bottom: 0.8rem;
+    }
+    .main__card__Patrick p {
+        color: var(--light-gray, 0.7);
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+    
+    /*Some of common selectors*/
+    img {
+        border-radius: 50px;
+        border: 3px solid rgba(0, 0, 0, .2);
+    }
+    h5 {
+        position: relative;
+        top: -55px;
+        left: 80px;
+        color:var(--light-grayish-blue);
+        font-size: 1.2rem;
+        max-width: 150px;
+    }
+    span {
+        color: var(--light-gray, 0.5);
+        font-size: 1rem;
+    }
+    
+    /*Bottom of page*/
+    .attribution { 
+        font-size: 11px; 
+        text-align: center; 
+    }
+    .attribution a { 
+        color: hsl(228, 45%, 44%); 
+    }
+
+    /*Media Queris*/
+    @media (max-width: 1300px) {
+        body {
+            display: grid;
+            justify-content: center;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            width: 450px;
+            height: 2350px;
+        }
+        .main__card__Daniel {
+            width: 400px;
+        }
+        .main__card__Daniel--quotation {
+            border-radius: 0;
+            border: none;
+            width: 100px;
+            position: absolute;
+            top: 0;
+            right: 2rem;
+        }
+        .main__card__Daniel h3 {
+            position: relative;
+            z-index: 1;
+        }
+        .main__card__Daniel p {
+            position: relative;
+            z-index: 1;
+        }
+        .main__card__Jonathan {
+            width: 400px;
+
+        }
+        .main__card__Jeanett {
+            width: 400px;
+        }
+        .main__card__Patrick {
+            width: 400px;
+        }
+        .main__card__Kira {
+            width: 400px;
+        }
+
+    }
